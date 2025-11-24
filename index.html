@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li></li>
+    </ul>
+</body>
+<script type="module">
+    import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
+
+    const conexion = io("http://localhost:3000", {
+        auth:{
+            username: Math.random()
+        }
+    })
+
+    conexion.emit("evento1", "SALUDANDO BRO EI OU MADAFAKA")
+
+
+
+</script>
+</html>
